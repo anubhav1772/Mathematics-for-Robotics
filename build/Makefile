@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named rank
+
+# Build rule for target.
+rank: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rank
+.PHONY : rank
+
+# fast build rule for target.
+rank/fast:
+	$(MAKE) -f CMakeFiles/rank.dir/build.make CMakeFiles/rank.dir/build
+.PHONY : rank/fast
+
+#=============================================================================
 # Target rules for targets named Cholesky
 
 # Build rule for target.
@@ -150,6 +163,33 @@ LinearAlgebra/CholeskyDecomposition.cpp.s:
 	$(MAKE) -f CMakeFiles/Cholesky.dir/build.make CMakeFiles/Cholesky.dir/LinearAlgebra/CholeskyDecomposition.cpp.s
 .PHONY : LinearAlgebra/CholeskyDecomposition.cpp.s
 
+LinearAlgebra/MatrixRank.o: LinearAlgebra/MatrixRank.cpp.o
+
+.PHONY : LinearAlgebra/MatrixRank.o
+
+# target to build an object file
+LinearAlgebra/MatrixRank.cpp.o:
+	$(MAKE) -f CMakeFiles/rank.dir/build.make CMakeFiles/rank.dir/LinearAlgebra/MatrixRank.cpp.o
+.PHONY : LinearAlgebra/MatrixRank.cpp.o
+
+LinearAlgebra/MatrixRank.i: LinearAlgebra/MatrixRank.cpp.i
+
+.PHONY : LinearAlgebra/MatrixRank.i
+
+# target to preprocess a source file
+LinearAlgebra/MatrixRank.cpp.i:
+	$(MAKE) -f CMakeFiles/rank.dir/build.make CMakeFiles/rank.dir/LinearAlgebra/MatrixRank.cpp.i
+.PHONY : LinearAlgebra/MatrixRank.cpp.i
+
+LinearAlgebra/MatrixRank.s: LinearAlgebra/MatrixRank.cpp.s
+
+.PHONY : LinearAlgebra/MatrixRank.s
+
+# target to generate assembly for a file
+LinearAlgebra/MatrixRank.cpp.s:
+	$(MAKE) -f CMakeFiles/rank.dir/build.make CMakeFiles/rank.dir/LinearAlgebra/MatrixRank.cpp.s
+.PHONY : LinearAlgebra/MatrixRank.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -158,10 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... rank"
 	@echo "... Cholesky"
 	@echo "... LinearAlgebra/CholeskyDecomposition.o"
 	@echo "... LinearAlgebra/CholeskyDecomposition.i"
 	@echo "... LinearAlgebra/CholeskyDecomposition.s"
+	@echo "... LinearAlgebra/MatrixRank.o"
+	@echo "... LinearAlgebra/MatrixRank.i"
+	@echo "... LinearAlgebra/MatrixRank.s"
 .PHONY : help
 
 

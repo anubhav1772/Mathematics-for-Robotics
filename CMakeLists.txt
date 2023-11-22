@@ -16,3 +16,6 @@ link_directories(${Eigen_INCLUDE_DIRS})
 add_executable (Cholesky LinearAlgebra/CholeskyDecomposition.cpp)
 #target_link_libraries (test ${EIGEN_LIBRARIES})
 target_link_libraries (Cholesky Eigen3::Eigen)
+
+add_executable (rank LinearAlgebra/MatrixRank.cpp)
+target_link_libraries (rank Eigen3::Eigen)

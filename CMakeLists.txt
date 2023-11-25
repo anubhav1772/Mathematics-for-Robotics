@@ -19,3 +19,6 @@ target_link_libraries (Cholesky Eigen3::Eigen)
 
 add_executable (rank LinearAlgebra/MatrixRank.cpp)
 target_link_libraries (rank Eigen3::Eigen)
+
+add_executable (LU LinearAlgebra/LUDecomposition.cpp)
+target_link_libraries (LU Eigen3::Eigen)

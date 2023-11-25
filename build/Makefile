@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named LU
+
+# Build rule for target.
+LU: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LU
+.PHONY : LU
+
+# fast build rule for target.
+LU/fast:
+	$(MAKE) -f CMakeFiles/LU.dir/build.make CMakeFiles/LU.dir/build
+.PHONY : LU/fast
+
+#=============================================================================
 # Target rules for targets named rank
 
 # Build rule for target.
@@ -163,6 +176,33 @@ LinearAlgebra/CholeskyDecomposition.cpp.s:
 	$(MAKE) -f CMakeFiles/Cholesky.dir/build.make CMakeFiles/Cholesky.dir/LinearAlgebra/CholeskyDecomposition.cpp.s
 .PHONY : LinearAlgebra/CholeskyDecomposition.cpp.s
 
+LinearAlgebra/LUDecomposition.o: LinearAlgebra/LUDecomposition.cpp.o
+
+.PHONY : LinearAlgebra/LUDecomposition.o
+
+# target to build an object file
+LinearAlgebra/LUDecomposition.cpp.o:
+	$(MAKE) -f CMakeFiles/LU.dir/build.make CMakeFiles/LU.dir/LinearAlgebra/LUDecomposition.cpp.o
+.PHONY : LinearAlgebra/LUDecomposition.cpp.o
+
+LinearAlgebra/LUDecomposition.i: LinearAlgebra/LUDecomposition.cpp.i
+
+.PHONY : LinearAlgebra/LUDecomposition.i
+
+# target to preprocess a source file
+LinearAlgebra/LUDecomposition.cpp.i:
+	$(MAKE) -f CMakeFiles/LU.dir/build.make CMakeFiles/LU.dir/LinearAlgebra/LUDecomposition.cpp.i
+.PHONY : LinearAlgebra/LUDecomposition.cpp.i
+
+LinearAlgebra/LUDecomposition.s: LinearAlgebra/LUDecomposition.cpp.s
+
+.PHONY : LinearAlgebra/LUDecomposition.s
+
+# target to generate assembly for a file
+LinearAlgebra/LUDecomposition.cpp.s:
+	$(MAKE) -f CMakeFiles/LU.dir/build.make CMakeFiles/LU.dir/LinearAlgebra/LUDecomposition.cpp.s
+.PHONY : LinearAlgebra/LUDecomposition.cpp.s
+
 LinearAlgebra/MatrixRank.o: LinearAlgebra/MatrixRank.cpp.o
 
 .PHONY : LinearAlgebra/MatrixRank.o
@@ -198,11 +238,15 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... LU"
 	@echo "... rank"
 	@echo "... Cholesky"
 	@echo "... LinearAlgebra/CholeskyDecomposition.o"
 	@echo "... LinearAlgebra/CholeskyDecomposition.i"
 	@echo "... LinearAlgebra/CholeskyDecomposition.s"
+	@echo "... LinearAlgebra/LUDecomposition.o"
+	@echo "... LinearAlgebra/LUDecomposition.i"
+	@echo "... LinearAlgebra/LUDecomposition.s"
 	@echo "... LinearAlgebra/MatrixRank.o"
 	@echo "... LinearAlgebra/MatrixRank.i"
 	@echo "... LinearAlgebra/MatrixRank.s"

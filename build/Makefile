@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/anubhav1772/github/Mathematics-for-Robotics/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -109,6 +109,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named QR
+
+# Build rule for target.
+QR: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 QR
+.PHONY : QR
+
+# fast build rule for target.
+QR/fast:
+	$(MAKE) -f CMakeFiles/QR.dir/build.make CMakeFiles/QR.dir/build
+.PHONY : QR/fast
 
 #=============================================================================
 # Target rules for targets named LU
@@ -230,14 +243,42 @@ LinearAlgebra/MatrixRank.cpp.s:
 	$(MAKE) -f CMakeFiles/rank.dir/build.make CMakeFiles/rank.dir/LinearAlgebra/MatrixRank.cpp.s
 .PHONY : LinearAlgebra/MatrixRank.cpp.s
 
+LinearAlgebra/QRDecomposition.o: LinearAlgebra/QRDecomposition.cpp.o
+
+.PHONY : LinearAlgebra/QRDecomposition.o
+
+# target to build an object file
+LinearAlgebra/QRDecomposition.cpp.o:
+	$(MAKE) -f CMakeFiles/QR.dir/build.make CMakeFiles/QR.dir/LinearAlgebra/QRDecomposition.cpp.o
+.PHONY : LinearAlgebra/QRDecomposition.cpp.o
+
+LinearAlgebra/QRDecomposition.i: LinearAlgebra/QRDecomposition.cpp.i
+
+.PHONY : LinearAlgebra/QRDecomposition.i
+
+# target to preprocess a source file
+LinearAlgebra/QRDecomposition.cpp.i:
+	$(MAKE) -f CMakeFiles/QR.dir/build.make CMakeFiles/QR.dir/LinearAlgebra/QRDecomposition.cpp.i
+.PHONY : LinearAlgebra/QRDecomposition.cpp.i
+
+LinearAlgebra/QRDecomposition.s: LinearAlgebra/QRDecomposition.cpp.s
+
+.PHONY : LinearAlgebra/QRDecomposition.s
+
+# target to generate assembly for a file
+LinearAlgebra/QRDecomposition.cpp.s:
+	$(MAKE) -f CMakeFiles/QR.dir/build.make CMakeFiles/QR.dir/LinearAlgebra/QRDecomposition.cpp.s
+.PHONY : LinearAlgebra/QRDecomposition.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... QR"
 	@echo "... LU"
 	@echo "... rank"
 	@echo "... Cholesky"
@@ -250,6 +291,9 @@ help:
 	@echo "... LinearAlgebra/MatrixRank.o"
 	@echo "... LinearAlgebra/MatrixRank.i"
 	@echo "... LinearAlgebra/MatrixRank.s"
+	@echo "... LinearAlgebra/QRDecomposition.o"
+	@echo "... LinearAlgebra/QRDecomposition.i"
+	@echo "... LinearAlgebra/QRDecomposition.s"
 .PHONY : help
 
 

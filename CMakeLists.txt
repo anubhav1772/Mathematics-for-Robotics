@@ -22,3 +22,6 @@ target_link_libraries (rank Eigen3::Eigen)
 
 add_executable (LU LinearAlgebra/LUDecomposition.cpp)
 target_link_libraries (LU Eigen3::Eigen)
+
+add_executable (QR LinearAlgebra/QRDecomposition.cpp)
+target_link_libraries (QR Eigen3::Eigen)

@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named interpolate
+
+# Build rule for target.
+interpolate: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 interpolate
+.PHONY : interpolate
+
+# fast build rule for target.
+interpolate/fast:
+	$(MAKE) -f CMakeFiles/interpolate.dir/build.make CMakeFiles/interpolate.dir/build
+.PHONY : interpolate/fast
+
+#=============================================================================
 # Target rules for targets named QR
 
 # Build rule for target.
@@ -161,6 +174,33 @@ Cholesky: cmake_check_build_system
 Cholesky/fast:
 	$(MAKE) -f CMakeFiles/Cholesky.dir/build.make CMakeFiles/Cholesky.dir/build
 .PHONY : Cholesky/fast
+
+Interpolation/InterpolatePoly.o: Interpolation/InterpolatePoly.cpp.o
+
+.PHONY : Interpolation/InterpolatePoly.o
+
+# target to build an object file
+Interpolation/InterpolatePoly.cpp.o:
+	$(MAKE) -f CMakeFiles/interpolate.dir/build.make CMakeFiles/interpolate.dir/Interpolation/InterpolatePoly.cpp.o
+.PHONY : Interpolation/InterpolatePoly.cpp.o
+
+Interpolation/InterpolatePoly.i: Interpolation/InterpolatePoly.cpp.i
+
+.PHONY : Interpolation/InterpolatePoly.i
+
+# target to preprocess a source file
+Interpolation/InterpolatePoly.cpp.i:
+	$(MAKE) -f CMakeFiles/interpolate.dir/build.make CMakeFiles/interpolate.dir/Interpolation/InterpolatePoly.cpp.i
+.PHONY : Interpolation/InterpolatePoly.cpp.i
+
+Interpolation/InterpolatePoly.s: Interpolation/InterpolatePoly.cpp.s
+
+.PHONY : Interpolation/InterpolatePoly.s
+
+# target to generate assembly for a file
+Interpolation/InterpolatePoly.cpp.s:
+	$(MAKE) -f CMakeFiles/interpolate.dir/build.make CMakeFiles/interpolate.dir/Interpolation/InterpolatePoly.cpp.s
+.PHONY : Interpolation/InterpolatePoly.cpp.s
 
 LinearAlgebra/CholeskyDecomposition.o: LinearAlgebra/CholeskyDecomposition.cpp.o
 
@@ -277,11 +317,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... interpolate"
 	@echo "... rebuild_cache"
 	@echo "... QR"
 	@echo "... LU"
 	@echo "... rank"
 	@echo "... Cholesky"
+	@echo "... Interpolation/InterpolatePoly.o"
+	@echo "... Interpolation/InterpolatePoly.i"
+	@echo "... Interpolation/InterpolatePoly.s"
 	@echo "... LinearAlgebra/CholeskyDecomposition.o"
 	@echo "... LinearAlgebra/CholeskyDecomposition.i"
 	@echo "... LinearAlgebra/CholeskyDecomposition.s"

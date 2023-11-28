@@ -15,6 +15,8 @@ using namespace std::literals;
 * QR decomposition (using Householder Method)
 * Example - https://atozmath.com/example/MatrixEv.aspx?q=qrdecomphh&q1=E1
 * Eigen documentation - https://eigen.tuxfamily.org/dox/classEigen_1_1HouseholderQR.html
+* Alternate: Gram Schmidt Method
+* Example - https://atozmath.com/example/MatrixEv.aspx?q=qrdecompgs&q1=E1
 */
 
 int main()

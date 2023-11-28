@@ -14,7 +14,7 @@ link_directories(${Eigen_INCLUDE_DIRS})
 
 # Executables
 add_executable (Cholesky LinearAlgebra/CholeskyDecomposition.cpp)
-#target_link_libraries (test ${EIGEN_LIBRARIES})
+#target_link_libraries (Cholesky ${EIGEN_LIBRARIES})
 target_link_libraries (Cholesky Eigen3::Eigen)
 
 add_executable (rank LinearAlgebra/MatrixRank.cpp)
@@ -25,3 +25,6 @@ target_link_libraries (LU Eigen3::Eigen)
 
 add_executable (QR LinearAlgebra/QRDecomposition.cpp)
 target_link_libraries (QR Eigen3::Eigen)
+
+add_executable (interpolate Interpolation/InterpolatePoly.cpp)
+target_link_libraries (interpolate Eigen3::Eigen)

@@ -11,7 +11,7 @@
 
     <img src="https://drive.google.com/uc?export=view&id=11H7af5Lagj5ilLILzIvXBmoQM4e1S3vb" height="25%" width="25%"/>
 
-  - Perform QR decomposition on the Vandermonde matrix **V**.
+  - Perform [QR decomposition](https://github.com/anubhav1772/Mathematics-for-Robotics/blob/main/LinearAlgebra/QRDecomposition.cpp) on the Vandermonde matrix **V**.
  
     `V = QR`, where **Q** is an orthogonal matrix and **R** is an upper triangular matrix.
   - Let $y$ be the column vector of $y_{i}$ values.

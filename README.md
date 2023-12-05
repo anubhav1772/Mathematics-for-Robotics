@@ -1,7 +1,15 @@
 # Mathematics-for-Robotics
-Important mathematical algorithms used in robotics.
+Important mathematical algorithms used in robotics implemented using C++.
 
-#### Helpful libraries
+### How to get started? 
+
+    # Setup for linux
+    git clone https://github.com/anubhav1772/Mathematics-for-Robotics.git
+    cd Mathematics-for-Robotics && mkdir build && cd build
+    cmake ..
+    make
+
+### Helpful libraries
 - [Eigen](https://eigen.tuxfamily.org/index.php?title=Main_Page) - Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.
   - [Documentation](https://eigen.tuxfamily.org/dox/GettingStarted.html)
   - [Gitlab](https://gitlab.com/libeigen/eigen)
@@ -12,6 +20,9 @@ Important mathematical algorithms used in robotics.
   - [Github](https://github.com/coin-or/Ipopt)
 - [Cppad](https://cppad.readthedocs.io/) - A C++ Algorithmic Differentiation Package.
   - [Github](https://github.com/coin-or/Cppad)
+
+### Dependencies
+* [Eigen v3.4.0](http://www.eigen.tuxfamily.org/index.php?title=Main_Page#Download) - [Installation](https://github.com/anubhav1772/trajectory_planning_gui/blob/main/Eigen3_installation)
 
 
 

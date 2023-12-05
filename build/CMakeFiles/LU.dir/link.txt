@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/LU.dir/LinearAlgebra/LUDecomposition.cpp.o  -o LU 

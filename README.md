@@ -24,6 +24,9 @@ Important mathematical algorithms used in robotics implemented using C++.
   - [Github](https://github.com/Gurobi)
   - [Documentation](https://www.gurobi.com/documentation/)
   - [Examples](https://www.gurobi.com/resources/functional-code-examples/)
+- [Drake](https://drake.mit.edu/) - A collection of tools for analyzing the dynamics of our robots and building control systems for them, with a heavy emphasis on optimization-based design/analysis.
+  - [Github](https://github.com/RobotLocomotion/drake)
+  - [Tutorials](https://drake.mit.edu/index.html#tutorials)
 
 ### Dependencies
 * [Eigen v3.4.0](http://www.eigen.tuxfamily.org/index.php?title=Main_Page#Download) - [Installation](https://github.com/anubhav1772/trajectory_planning_gui/blob/main/Eigen3_installation)

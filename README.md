@@ -20,6 +20,10 @@ Important mathematical algorithms used in robotics implemented using C++.
   - [Github](https://github.com/coin-or/Ipopt)
 - [Cppad](https://cppad.readthedocs.io/) - A C++ Algorithmic Differentiation Package.
   - [Github](https://github.com/coin-or/Cppad)
+- [Gurobi](https://www.gurobi.com/) - It includes a powerful solver for LP, QP, MIP and other optimization problems.
+  - [Github](https://github.com/Gurobi)
+  - [Documentation](https://www.gurobi.com/documentation/)
+  - [Examples](https://www.gurobi.com/resources/functional-code-examples/)
 
 ### Dependencies
 * [Eigen v3.4.0](http://www.eigen.tuxfamily.org/index.php?title=Main_Page#Download) - [Installation](https://github.com/anubhav1772/trajectory_planning_gui/blob/main/Eigen3_installation)
